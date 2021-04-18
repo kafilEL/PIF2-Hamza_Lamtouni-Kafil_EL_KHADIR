@@ -404,5 +404,4 @@ else:
     st.success('English : You probably dont have anything .. Stay safe\n'
                '\nFrancais : Vous n"avez probablement aucune maladie ! ')
 
-#  streamlit run "C:/Users/ASUS/PycharmProjects/ClassificationImages/tuto/ML webApp/Disease_Detection_WebAPP.py"
-# Website : https://share.streamlit.io/miraiinik/disease-detection/Disease_Detection_WebAPP.py
+
