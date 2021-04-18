@@ -28,7 +28,7 @@ Detection de maladies PIF 2,\n
 \nAu Professeur : Pr.Francois Meunier
 """)
 # Open and display an image
-image = Image.open(r'C:\Users\Utilisateur\Desktop\Final\ML webApp\1.png').convert('RGB')
+image = Image.open(r'data/1.png').convert('RGB')
 st.image(image, caption='Machine Learning', use_column_width=True)
 
 # DataSet Selection
@@ -42,17 +42,17 @@ classifier_name = st.sidebar.selectbox('Selectionner le modele de classification
 # Get the data
 
 if selection == "Diabetes":
-    data = pd.read_csv(r'C:\Users\Utilisateur\Desktop\Final\ML webApp\diabetes.csv')
+    data = pd.read_csv(r'data/diabetes.csv')
     # Check for duplicates and erase them
     data.drop_duplicates(inplace=True)
     st.subheader('Information sur les donnees')
 elif selection == 'Heart':
-    data = pd.read_csv(r'C:\Users\Utilisateur\Desktop\Final\ML webApp\cardio.csv', sep=";")
+    data = pd.read_csv(r'data/cardio.csv', sep=";")
     data.drop_duplicates(inplace=True)
     data = data.iloc[:, 1:13]
     st.subheader('Information sur les donnees')
 else:
-    data = pd.read_csv(r'C:\Users\Utilisateur\Desktop\Final\ML webApp\breast-cancer.csv')
+    data = pd.read_csv(r'data/breast-cancer.csv')
     data = data.dropna(axis=1)
     data = data.iloc[:, 1:15]
 
